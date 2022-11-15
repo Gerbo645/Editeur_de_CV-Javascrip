@@ -1,26 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    div.div1 {
+      width: 50%;
+      float: left;
+      background-color:lightgoldenrodyellow;
+      height: 1500px;
+      
+    }
+    div.div2 {
+      width: 40%;
+      float: right;
+      background-color:lightblue;
+      height: 1500px;
+    }
+    h2 {
+      border: 8px blue double;
+      border-radius: 10px 10 px 10 px;
+      background-color:lavenderblush;
+      box-shadow: 6px 6px 0px black;
+      font-size: 70pt;
+      font-style: arial rgb(212, 44, 44);
+    }
+    h1 {
+      border: 8px rgb(32, 32, 117) double;
+      border-radius: 10px 10 px 10 px;
+      background-color:lavenderblush;
+      box-shadow: 6px 6px 0px black;
+      font-size: 70pt;
+      font-style: arial rgb(212, 44, 44);
+    }
+    h3 {
+      border: 8px blue double;
+      border-radius: 5px 5px 5px;
+      background-color:lavenderblush;
+      box-shadow: 6px 6px 0px black;
+      font-size: 70pt;
+      font-style: arial rgb(212, 44, 44);
+    }
+  </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
-    <div onmouseover="this.style.color='red'"
-    onmouseout="this.style.color='black'">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-             earum id quam ipsam ipsum praesentium cum accusantium adipisci obcaecati.
-              Magni numquam nihil eaque blanditiis minima accusantium,
-               dolor quibusdam, autem eos expedita debitis aspernatur ipsam officiis?
-                Excepturi fuga officia fugiat iure, delectus voluptates quis,
-                 reiciendis velit accusamus saepe necessitatibus, reprehenderit porro?
-        </p>
-    </div>
+  <h1><center> Faites votre CV en quelques etapes!
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M3 7.5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-2a.5.5 0 01-.5-.5v-3zm10 .25a.75.75 0 01-.75.75h-4.5a.75.75 0 010-1.5h4.5a.75.75 0 01.75.75zM10.25 11a.75.75 0 000-1.5h-2.5a.75.75 0 000 1.5h2.5z"></path><path fill-rule="evenodd" d="M7.25 0A1.75 1.75 0 005.5 1.75V3H1.75A1.75 1.75 0 000 4.75v8.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H10.5V1.75A1.75 1.75 0 008.75 0h-1.5zm3.232 4.5A1.75 1.75 0 018.75 6h-1.5a1.75 1.75 0 01-1.732-1.5H1.75a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25v-8.5a.25.25 0 00-.25-.25h-3.768zM7 1.75a.25.25 0 01.25-.25h1.5a.25.25 0 01.25.25v2.5a.25.25 0 01-.25.25h-1.5A.25.25 0 017 4.25v-2.5z"></path></svg>
+  </center></h1>
+      <div class="div1">
+        <center><h3>Profil</h3></center>
+        <div class="mb-3">
+          <label for="photo">Photo</label>
+          <input type="file"  class="form-control" id="photo_input">
+        </div>
+        <div class="col-sm-11,5">
+        <label for="nom" >Nom</label>
+          <input type="text" class="form-control" name="nom" id="name_input">
+        </div>
+        <div class="mb-3">
+        <label for="prenom">Prenom</label>
+           <input type="text" class="form-control" id="prenom_input">
+          </div>
+          <div class="mb-3">
+            <label for="sexe">Sexe</label>
+            <select  class="form-select" name="sexe" id="sexe_input">
+              <option selected></option>
+              <option value="Masculin">Masculin</option>
+              <option value="Feminin">Feminin</option>
+            </select>
+            <div class="col-sm-11,5">
+              <label for="datenaissance" >Date de naissance</label>
+                <input type="date" class="form-control" name="nom" id="naiss_input">
+              </div>
 
-    <script src="script.js"></script>
-   <button onclick="alert('arrete')='on clique'">cliquez-ici</button>
-    
+            <center><h2>Parcours scolaire et diplomes</h2>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"></path></svg>
+            </center>
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <label for="libelle1 ">libelle</label>
+                <input type="text" class="form-control" id="libelle1_input">
+              </div>
+              <div class="col-sm">
+                <label for="date">Date debut</label>
+                <input type="date" class="form-control" id="debut1_input" >
+              </div>
+              <div class="col-sm">
+                <label for="datefin">Date fin</label>
+                <input type="date" class="form-control" id="fin1_input">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <label for="libelle1 ">libelle</label>
+                <input type="text" class="form-control" id="libelle2_input">
+              </div>
+              <div class="col-sm">
+                <label for="date">Date debut</label>
+                <input type="date" class="form-control" id="debut2_input" >
+              </div>
+              <div class="col-sm">
+                <label for="datefin">Date fin</label>
+                <input type="date" class="form-control" id="fin2_input">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-4">
+                <label for="libelle1 ">libelle</label>
+                <input type="text" class="form-control" id="libelle3_input">
+              </div>
+              <div class="col-sm">
+                <label for="date">Date debut</label>
+                <input type="date" class="form-control" id="debut3_input" >
+              </div>
+              <div class="col-sm">
+                <label for="datefin">Date fin</label>
+                <input type="date" class="form-control" id="fin3_input">
+              </div>
+            </div>
+          </div>
+          <center><h2>Coordonnees</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"></path></svg>
+          </center>
+          <div class="row g-3">
+            <div class="col-sm-4">
+              <label for="Contact ">Contact</label>
+              <input type="tel" class="form-control" id="contact_input">
+            </div>
+            <div class="col-sm">
+              <label for="adesse">Adresse</label>
+              <input type="text" class="form-control" id="adresse_input" >
+            </div>
+            <div class="col-sm">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email_input">
+            </div>
+           <center><h2>Parcours et Objectifs</h2></center>
+           <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="parcour_input" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Parcours et Objectifs</label>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button">Ajouter une information</button>
+          </div>
+          </div>
+      
+        </div>
+        
+    </div>
+<div class="div2">
+ <center> <h2 class="pas">Profil Personel </h2>
+</center>
+  <div class="mb-3">
+  <label for="">Photo</label>
+  <span class="form-control" id="photo_output"></span>
+</div>
+<div class="mb-3">
+<label  for="">Nom:</label>
+<span class="form-control" id="name_output"></span>
+</div>
+<div class="mb-3">
+<label  for="">Prenom:</label>
+<span  class="form-control" id="prenom_output"></span>
+</div>
+<label for="">Sexe</label>
+<span class="form-control" id="sexe_output"></span>
+<div class="col-sm-11,5">
+  <label for="datenaissance" >Date de naissance</label>
+    <span  class="form-control" id="naiss_output"></span>
+  </div>
+
+<center><h2>Parcours scolaire et diplomes</h2>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"></path></svg>
+</center>
+<div class="row g-3">
+  <div class="col-sm-4">
+    <label for="libelle1 ">libelle</label>
+    <span class="form-control" id="libelle1_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="date">Date debut</label>
+    <span class="form-control" id="debut1_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="datefin">Date fin</label>
+    <span class="form-control" id="fin1_output"></span>
+  </div>
+</div>
+<div class="row g-3">
+  <div class="col-sm-4">
+    <label for="libelle1 ">libelle</label>
+    <span class="form-control" id="libelle2_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="date">Date debut</label>
+    <span class="form-control" id="debut2_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="datefin">Date fin</label>
+    <span class="form-control" id="fin2_output"></span>
+  </div>
+</div>
+<div class="row g-3">
+  <div class="col-sm-4">
+    <label for="libelle1 ">libelle</label>
+    <span class="form-control" id="libelle3_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="date">Date debut</label>
+    <span class="form-control" id="debut3_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="datefin">Date fin</label>
+    <span class="form-control" id="fin3_output"></span>
+  </div>
+</div>
+<center><h2>Coordonnees</h2>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M1.75 2A1.75 1.75 0 000 3.75v.736a.75.75 0 000 .027v7.737C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0016 12.25v-8.5A1.75 1.75 0 0014.25 2H1.75zM14.5 4.07v-.32a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v.32L8 7.88l6.5-3.81zm-13 1.74v6.441c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809z"></path></svg>
+</center>
+<div class="row g-3">
+  <div class="col-sm-4">
+    <label for="contact ">Contact</label>
+    <span class="form-control" id="contact_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="adresse">Adresse</label>
+    <span class="form-control" id="adresse_output"></span>
+  </div>
+  <div class="col-sm">
+    <label for="email">Email</label>
+    <span class="form-control" id="email_output"></span>
+  </div>
+</div>
+<center><h2>Parcours et Objectifs</h2>
+<div class="form-control">
+  <label for="parcour">Parcours et Objectifs</label>
+  <span  class="form-control" id="parcour_output"></span>
+</div>
+
+<center>
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary active" aria-current="page">Imprimer</a>
+    <a href="#" class="btn btn-primary">PDF</a>
+    <a href="#" class="btn btn-danger">WORD</a>
+  </div>
+</center>
+
+</div >
+  
+  <script src="script.js"></script>
 </body>
 </html>
