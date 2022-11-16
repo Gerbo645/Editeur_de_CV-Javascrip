@@ -1,4 +1,20 @@
 
+function afficheImage(){
+    let file = document.querySelector("input[type=file]").files;
+    let resultat = document.querySelector("#resultat");
+    if(file.length >0 ){
+       var reader = new FileReader();
+       reader.onload = function(event){
+        document.getElementById('resultat').setAttribute("src", event.target.result);
+        resultat.width = 150
+        resultat.heigth = 100
+        resultat.border =  ("1,solid")
+         
+       }
+       document.querySelector("#deplay_image").style.backgroundImage = "url( ${event.target.result})"
+    }
+    reader.readAsDataURL(file[0]);
+}
 let name_input = document.getElementById('name_input')
 name_input.addEventListener('input',(e)=>{
     name_output.textContent=e.target.value
